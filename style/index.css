@@ -1,0 +1,152 @@
+@font-face {
+  font-family: eras-b;
+  src: url(../fonts/eras-bold.otf);
+}
+
+@font-face {
+  font-family: eras-demi;
+  src: url(../fonts/eras-demi.otf);
+}
+
+@font-face {
+  font-family: roboto-l;
+  src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: roboto;
+}
+
+body .wrapper {
+  width: 1080px;
+  position: relative;
+  top: calc(50vh - 300px);
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper h1.title {
+  font-family: eras-b;
+  color: #1899AF;
+  margin-bottom: 50px;
+}
+
+body .pop-up {
+  width: 460px;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1899AF;
+  color: #FFF;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
+          animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+body .pop-up h2 {
+  font-family: roboto-l;
+  font-size: 1.25rem;
+}
+
+body .pop-up h2 span {
+  font-family: eras-demi;
+}
+
+body .pop-up h1 {
+  font-size: 3rem;
+  font-family: roboto-l;
+}
+
+body .splash-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+body .splash-screen img.portrait {
+  width: 280px;
+  height: 365px;
+  border: 1px solid #949494;
+}
+
+body .splash-screen h1#name {
+  font-size: 2.188rem;
+  color: #1899AF;
+}
+
+body .splash-screen .tel {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: roboto-l;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+body .splash-screen .tel img {
+  height: 100%;
+  margin-right: 10px;
+}
+
+body .splash-screen p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
