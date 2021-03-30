@@ -29,9 +29,7 @@ body {
 
 body .wrapper {
   width: 1080px;
-  position: relative;
-  top: calc(50vh - 300px);
-  margin: auto;
+  margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +45,7 @@ body .wrapper {
 body .wrapper h1.title {
   font-family: eras-b;
   color: #1899AF;
+  text-transform: uppercase;
   margin-bottom: 50px;
 }
 
@@ -71,6 +70,7 @@ body .pop-up {
           align-items: center;
   background-color: #1899AF;
   color: #FFF;
+  z-index: 100;
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
           animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
 }
@@ -112,7 +112,7 @@ body .pop-up h1 {
 }
 
 body .splash-screen {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -148,5 +148,88 @@ body .splash-screen .tel img {
 body .splash-screen p {
   font-size: 1.5rem;
   text-align: center;
+}
+
+body .splash-screen img.arrow {
+  width: 60px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 30px);
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    bottom: 35px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    bottom: 35px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body .process .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .process .wrapper .left {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body .process .wrapper .right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: right;
+}
+
+body .process .wrapper .middle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+body .process .wrapper div {
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+body .process .wrapper div h1 {
+  font-family: eras-demi;
+  font-size: 1.625rem;
+}
+
+body .process .wrapper div h1 span {
+  color: #EC6724;
+}
+
+body .process .wrapper div h2 {
+  font-family: roboto-l;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 /*# sourceMappingURL=index.css.map */
