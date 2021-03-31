@@ -232,4 +232,39 @@ body .process .wrapper div h2 {
   font-size: 1.5rem;
   font-weight: lighter;
 }
+
+body .fees .wrapper div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .fees .wrapper div.container div {
+  width: 500px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+body .fees .wrapper div.container div h2 {
+  font-size: 1.625rem;
+  font-family: eras-demi;
+  margin-bottom: 20px;
+}
+
+body .fees .wrapper div.container div ul {
+  list-style-type: none;
+}
+
+body .fees .wrapper div.container div li {
+  font-size: 1.20rem;
+}
+
+body .fees .wrapper div.container div span {
+  color: #EC6724;
+}
 /*# sourceMappingURL=index.css.map */

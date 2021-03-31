@@ -190,4 +190,41 @@ body {
             }
         }
     }
+
+    .fees {
+        
+        .wrapper {
+
+            div.container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                div {
+                    width: 500px;
+                    text-align: center;
+
+                    margin-bottom: 50px;
+    
+                    h2 {
+                        font-size: 1.625rem;
+                        font-family: eras-demi;
+
+                        margin-bottom: 20px;
+                    }
+    
+                    ul {
+                        list-style-type: none;
+                    }
+                    li {
+                        font-size: 1.20rem;
+                    }
+    
+                    span {
+                        color: $accent-color2;
+                    }
+                }
+            }
+        }
+    }
 }
