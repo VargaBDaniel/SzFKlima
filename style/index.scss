@@ -7,6 +7,10 @@
     src: url(../fonts/eras-demi.otf)
 }
 @font-face {
+    font-family: eras;
+    src: url(../fonts/eras.otf)
+}
+@font-face {
     font-family: roboto-l;
     src: url(../fonts/Roboto-Light.ttf)
 }
@@ -26,11 +30,7 @@ $accent-color2: #EC6724;
 body {
     font-family: roboto;
 
-    .wrapper {
-        width: 1080px;
-
-        margin: 50px auto;
-
+    >div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,9 +39,19 @@ body {
             font-family: eras-b;
             color: $accent-color1;
             text-transform: uppercase;
-
+    
             margin-bottom: 50px;
         }
+    }
+
+    .wrapper {
+        width: 1080px;
+
+        margin: 50px auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .pop-up {
@@ -91,6 +101,10 @@ body {
     .splash-screen {
         width: 100%;
         height: 100vh;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img.portrait {
             width: 280px;
@@ -223,6 +237,32 @@ body {
                     span {
                         color: $accent-color2;
                     }
+                }
+            }
+        }
+    }
+
+    .example {
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            div {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                margin-bottom: 40px;
+
+                text-align: center;
+                font-family: eras;
+
+                img {
+                    height: 295px;
                 }
             }
         }

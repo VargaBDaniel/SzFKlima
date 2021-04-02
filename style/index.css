@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: eras;
+  src: url(../fonts/eras.otf);
+}
+
+@font-face {
   font-family: roboto-l;
   src: url(../fonts/Roboto-Light.ttf);
 }
@@ -27,6 +32,26 @@ body {
   font-family: roboto;
 }
 
+body > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > div h1.title {
+  font-family: eras-b;
+  color: #1899AF;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
 body .wrapper {
   width: 1080px;
   margin: 50px auto;
@@ -40,13 +65,6 @@ body .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body .wrapper h1.title {
-  font-family: eras-b;
-  color: #1899AF;
-  text-transform: uppercase;
-  margin-bottom: 50px;
 }
 
 body .pop-up {
@@ -114,6 +132,15 @@ body .pop-up h1 {
 body .splash-screen {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .splash-screen img.portrait {
@@ -266,5 +293,40 @@ body .fees .wrapper div.container div li {
 
 body .fees .wrapper div.container div span {
   color: #EC6724;
+}
+
+body .example .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .example .wrapper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: eras;
+}
+
+body .example .wrapper div img {
+  height: 295px;
 }
 /*# sourceMappingURL=index.css.map */
