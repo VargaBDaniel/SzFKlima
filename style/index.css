@@ -55,6 +55,7 @@ body > div h1.title {
 body .wrapper {
   width: 1080px;
   margin: 50px auto;
+  margin-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,5 +329,132 @@ body .example .wrapper div {
 
 body .example .wrapper div img {
   height: 295px;
+}
+
+body .tips {
+  overflow-x: hidden;
+}
+
+body .tips .wrapper p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+body .tips .wrapper p:first-child {
+  width: 60%;
+}
+
+body .tips .wrapper > h2 {
+  font-family: eras-demi;
+  font-size: 1.625rem;
+  margin-bottom: 15px;
+}
+
+body .tips .wrapper div.container {
+  width: 1080px;
+}
+
+body .tips .wrapper div.container div {
+  height: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+  color: #FFF;
+}
+
+body .tips .wrapper div.container div h1 {
+  width: 50%;
+  font-family: eras-demi;
+  font-weight: lighter;
+  font-size: 1.625rem;
+  margin: 25px 0;
+}
+
+body .tips .wrapper div.container div ul {
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
+
+body .tips .wrapper div.container div ul li {
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+body .tips .wrapper div.container div ul li::before {
+  content: '\2022';
+  color: #EC6724;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+body .tips .wrapper div.container div.blue {
+  height: unset;
+  background-color: #1899AF;
+  position: relative;
+}
+
+body .tips .wrapper div.container div.blue::before {
+  content: '';
+  height: 100%;
+  width: 1500px;
+  position: absolute;
+  background-color: #1899AF;
+  right: 100%;
+}
+
+body .tips .wrapper div.container div.blue h2 {
+  font-family: roboto-l;
+  font-weight: lighter;
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+body .tips .wrapper div.container div.orange {
+  background-color: #EC6724;
+  position: relative;
+  text-align: right;
+  height: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .tips .wrapper div.container div.orange::after {
+  content: '';
+  height: 100%;
+  width: 1500px;
+  position: absolute;
+  background-color: #EC6724;
+  left: 100%;
+}
+
+body .tips .wrapper div.container div.orange h1 {
+  width: unset;
+}
+
+body .tips .wrapper div.container div.orange p {
+  width: 70%;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+body .tips .wrapper div.container div.orange p:last-child {
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=index.css.map */
