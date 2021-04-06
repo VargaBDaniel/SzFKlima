@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     
+
     <title>Székely Ferenc Klímaszerelő</title>
 
     <link rel="stylesheet" href="style/index.css">
-     
+    <link rel="stylesheet" href="style/gallery.css">
+
+    <script src="scripts/ScrollToModule.js"></script>
 </head>
-<body>
+
+<body onload="initializeNavButtons()">
+    <div class="nav-menu">
+        <img src="img/logo_cropped.png" alt="" class="logo">
+        <div class="btn-wrapper">
+            <h1 data-scrollto-button="about">Rólunk</h1>
+            <h1 data-scrollto-button="process">Hogyan dolgozunk</h1>
+            <h1 data-scrollto-button="fees">Áraink</h1>
+            <h1 data-scrollto-button="example">Munkamenet</h1>
+            <h1 data-scrollto-button="tips">Tippek</h1>
+            <h1 data-scrollto-button="gallery">Galéria</h1>
+        </div>
+    </div>
     <div class="pop-up">
         <h2><span>Ingyenes</span> helyszíni felmérésre időpont egyeztetés</h2>
         <h1>+36 20 292 5281</h1>
     </div>
-    <div class="splash-screen">
+    <div class="splash-screen" data-scrollto-target="about">
         <div class="wrapper">
             <h1 class="title">Rólunk</h1>
             <img class="portrait" src="" alt="">
@@ -25,11 +40,12 @@
                 <h2>+36 20 292 5281</h2>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet eu neque nec posuere.
-                Cras varius hendrerit porttitor. In hac habitasse platea dictumst. Mauris tristique dui sit amet ipsum sagittis rutrum.</p>
+                Cras varius hendrerit porttitor. In hac habitasse platea dictumst. Mauris tristique dui sit amet ipsum
+                sagittis rutrum.</p>
         </div>
         <img src="img/arrow.png" alt="Görgess lejjebb!" class="arrow">
     </div>
-    <div class="process">
+    <div class="process" data-scrollto-target="process">
         <h1 class="title">Hogyan dolgozunk?</h1>
         <div class="wrapper">
             <div class="right">
@@ -42,7 +58,8 @@
             </div>
             <div class="right">
                 <h1>3. LÉPÉS: <span>KLÍMA KIVÁLASZTÁSA</span></h1>
-                <h2>A helyszíni felmérés alapján megtervezzük a szükséges hűtési kapacitást és kiválasztjuk a legjobb ár/érték arányú klímaberendezést.</h2>
+                <h2>A helyszíni felmérés alapján megtervezzük a szükséges hűtési kapacitást és kiválasztjuk a legjobb
+                    ár/érték arányú klímaberendezést.</h2>
             </div>
             <div class="left">
                 <h1>4. LÉPÉS: <span>BESZERELÉS</span></h1>
@@ -50,11 +67,12 @@
             </div>
             <div class="middle">
                 <h1>5. LÉPÉS: <span>TISZTÍTÁS ÉS KARBANTARTÁS</span></h1>
-                <h2>Előre egyeztetett időpontban elvégezzük a klíma kötelező éves tisztítását és esetleges karbantartását.</h2>
+                <h2>Előre egyeztetett időpontban elvégezzük a klíma kötelező éves tisztítását és esetleges
+                    karbantartását.</h2>
             </div>
         </div>
     </div>
-    <div class="fees">
+    <div class="fees" data-scrollto-target="fees">
         <h1 class="title">Áraink</h1>
         <div class="wrapper">
             <div class="container">
@@ -95,7 +113,7 @@
 
         </div>
     </div>
-    <div class="example">
+    <div class="example" data-scrollto-target="example">
         <h1 class="title">A munka menete</h1>
         <div class="wrapper">
             <div>
@@ -109,66 +127,97 @@
             <div>
                 <img src="img/kep_3.jpg" alt="">
                 <h2>
-                    Alapszerelésen felüli szerelés: a klíma egységek beüzemeléséhez több 
-                    mint 3 méteres nyomvonal kiépítésére van szükség, ebben az esetben 
+                    Alapszerelésen felüli szerelés: a klíma egységek beüzemeléséhez több
+                    mint 3 méteres nyomvonal kiépítésére van szükség, ebben az esetben
                     egy alapszerelés és az azon túli csőszakasz hossza kerül kiszámlázásra
                 </h2>
             </div>
         </div>
     </div>
-    <div class="tips">
+    <div class="tips" data-scrollto-target="tips">
         <h1 class="title">Klímaszerelés</h1>
         <div class="wrapper">
             <p>Teljes körűen vállaljuk klímák beszerelését, beüzemelését, előcsövezését,
                 légcsatornázását, készülék beszerzését lakossági és ipari szinten egyaránt.</p>
             <h2>Ingyenes helyszíni felmérés
             </h2>
-            <p>Amennyiben úgy dönt, hogy szüksége van egy klíma készülékre, először mindenképpen kérje szakember véleményét!
+            <p>Amennyiben úgy dönt, hogy szüksége van egy klíma készülékre, először mindenképpen kérje szakember
+                véleményét!
             </p>
             <div class="container">
                 <div class="blue">
                     <h1>Ön igényeihez igazodva az alábbi szempontokat kell figyelembe venni:</h1>
                     <ul>
                         <li>mekkora a hűtendő/fűtendő helyiség mérete (alapterület, belmagasság)</li>
-                        <li>jellemzői (tetőtér, szigetelés, áramellátási lehetőség, kondenzvíz elvezetés, fal anyaga és vastagsága)</li>
+                        <li>jellemzői (tetőtér, szigetelés, áramellátási lehetőség, kondenzvíz elvezetés, fal anyaga és
+                            vastagsága)</li>
                         <li>hűtési, fűtési vagy mindkét funkció lesz-e aktívan használva</li>
                         <li>kültéri-beltéri egység elhelyezkedése és távolsága</li>
                         <li>wifi elérhetőséggel rendelkezzen-e a készülék</li>
                     </ul>
-                    <h2>Sürgős esetben az ingatlan alaprajza vagy szóbeli leírása alapján is elvégezhető a felmérés.</h2>
+                    <h2>Sürgős esetben az ingatlan alaprajza vagy szóbeli leírása alapján is elvégezhető a felmérés.
+                    </h2>
                 </div>
                 <div class="orange">
-                    <h1>Alapvetően helyiségenként 1db készülékben gondolkozzunk, ugyanis ahhoz, hogy több helyiséget is hatékonyan akklimatizáljunk, szerencsés adottságok kellenek.</h1>
-                    <p>Általánosságban elmondható, hogy túlnyomórészt 3,5KW-os készülékek kerülnek 
-                            felszerelésre 20-40m2-es helyiségekbe. 2,5KW-os készülékek igazán kis helyiségekben, 
-                            például kb. 10-15m2-es hálószobában hatékonyak és még ha gyárilag akár 15-20m2-es 
-                            helyiségben is használhatók, a 3,5KW-os készülékek könnyebben-kisebb teljesítménnyel 
-                            adják le a hőt és gyártótól függetlenül kb. 10-20e Ft a különbség. Tetőtéri kis helyiség 
-                            esetén pedig abszolút a 3,5KW-os készülék javasolt. 40-50m2 feletti helyiségek hatékony 
-                            hűtésére/fűtésére már inkább az 5KW-os készülékek javasoltak, azonban itt már 
-                            figyelembe kell venni a helyiségek elhelyezkedését. Amennyiben az egyik helyiség belső 
-                            falára helyezzük a készüléket és vele szemben helyezkedik el a másik klimatizálandó 
-                            helyiség ajtaja (szerencsés eset), úgy hatékonyan működtethetjük. Az egyik szobából a 
-                            másikba nem fog átmenni az előszobán és „bekanyarodni” a hő, habár a hőmérséklet 
-                            megpróbál kiegyenlítődni. Ide tartozik a nem elhanyagolható gazdasági tény is, miszerint 
-                            az 5KW-os készülékek kb. dupla annyiba kerülnek mint a 3,5KW-os társaik, így ha már 
-                            erre van szükségünk és pénztárcánk engedi az 5KW-os készüléket, érdemesebb lehet 
-                            elgondolkozni inkább 2db 3,5KW-os készüléken…
-                            </p>
-                    <p>Már meglévő ingatlanok esetében a kül- és beltéri egység legideálisabb helyét kell 
-                            megtalálnunk, a szükséges vezetékezést pedig ezeket eltakaró kábelcsatornába rejtjük.
-                            Újonnan épülő vagy átépítés alatt álló ingatlanok esetében a falba rejtve süllyesztjük a 
-                            vezetékeket, így érve el a diszkrét megjelenést.
-                            </p>
-                    <p>Klíma készülék felszerelésének legzajosabb és legporosabb része a beltéri és kültéri 
-                            egység összekötésének előkészítése. Ilyenkor jó esetben csak 1db lyukat szükséges 
-                            fúrni a homlokzati falon, mely kb. 6cm átmérőjű. A fúrás zaja sajnos nem tompítható, 
-                            porelszívást és - ha szükséges - védőfóliázást, valamint minden esetben magunk után 
-                            összetakarítást alkalmazunk.
-                            </p>
+                    <h1>Alapvetően helyiségenként 1db készülékben gondolkozzunk, ugyanis ahhoz, hogy több helyiséget is
+                        hatékonyan akklimatizáljunk, szerencsés adottságok kellenek.</h1>
+                    <p>Általánosságban elmondható, hogy túlnyomórészt 3,5KW-os készülékek kerülnek
+                        felszerelésre 20-40m2-es helyiségekbe. 2,5KW-os készülékek igazán kis helyiségekben,
+                        például kb. 10-15m2-es hálószobában hatékonyak és még ha gyárilag akár 15-20m2-es
+                        helyiségben is használhatók, a 3,5KW-os készülékek könnyebben-kisebb teljesítménnyel
+                        adják le a hőt és gyártótól függetlenül kb. 10-20e Ft a különbség. Tetőtéri kis helyiség
+                        esetén pedig abszolút a 3,5KW-os készülék javasolt. 40-50m2 feletti helyiségek hatékony
+                        hűtésére/fűtésére már inkább az 5KW-os készülékek javasoltak, azonban itt már
+                        figyelembe kell venni a helyiségek elhelyezkedését. Amennyiben az egyik helyiség belső
+                        falára helyezzük a készüléket és vele szemben helyezkedik el a másik klimatizálandó
+                        helyiség ajtaja (szerencsés eset), úgy hatékonyan működtethetjük. Az egyik szobából a
+                        másikba nem fog átmenni az előszobán és „bekanyarodni” a hő, habár a hőmérséklet
+                        megpróbál kiegyenlítődni. Ide tartozik a nem elhanyagolható gazdasági tény is, miszerint
+                        az 5KW-os készülékek kb. dupla annyiba kerülnek mint a 3,5KW-os társaik, így ha már
+                        erre van szükségünk és pénztárcánk engedi az 5KW-os készüléket, érdemesebb lehet
+                        elgondolkozni inkább 2db 3,5KW-os készüléken…
+                    </p>
+                    <p>Már meglévő ingatlanok esetében a kül- és beltéri egység legideálisabb helyét kell
+                        megtalálnunk, a szükséges vezetékezést pedig ezeket eltakaró kábelcsatornába rejtjük.
+                        Újonnan épülő vagy átépítés alatt álló ingatlanok esetében a falba rejtve süllyesztjük a
+                        vezetékeket, így érve el a diszkrét megjelenést.
+                    </p>
+                    <p>Klíma készülék felszerelésének legzajosabb és legporosabb része a beltéri és kültéri
+                        egység összekötésének előkészítése. Ilyenkor jó esetben csak 1db lyukat szükséges
+                        fúrni a homlokzati falon, mely kb. 6cm átmérőjű. A fúrás zaja sajnos nem tompítható,
+                        porelszívást és - ha szükséges - védőfóliázást, valamint minden esetben magunk után
+                        összetakarítást alkalmazunk.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="gallery" data-scrollto-target="gallery">
+        <h1 class="title">Munkáink</h1>
+        <div class="wrapper">
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img1.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img2.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img3.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img4.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img5.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img6.jpg" alt="">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="gallery/demo_img7.jpg" alt="">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
