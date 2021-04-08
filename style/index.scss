@@ -28,25 +28,24 @@ $accent-color2: #EC6724;
 }
 html {
     scroll-behavior: smooth;
-}
-
-body {
     font-family: roboto;
 
-    >div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        h1.title {
-            font-family: eras-b;
-            color: $accent-color1;
-            text-transform: uppercase;
+    body {
+        >div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
     
-            margin-bottom: 50px;
+            h1.title {
+                font-family: eras-b;
+                color: $accent-color1;
+                text-transform: uppercase;
+        
+                margin-bottom: 50px;
+            }
         }
     }
-
+    
     .wrapper {
         width: 1080px;
 
@@ -58,7 +57,7 @@ body {
         align-items: center;
     }
 
-    div.nav-menu {
+    .nav-menu {
         max-height: 80px;
         width: 100%;
         position: fixed;
@@ -82,6 +81,7 @@ body {
             h1 {
                 font-size: 1.625rem;
                 font-weight: lighter;
+                white-space: nowrap;
 
                 padding: 24px 0;
                 margin: 0 15px;
@@ -110,6 +110,10 @@ body {
                 }
             }
 
+        }
+
+        &.mobile {
+            display: none;
         }
     }
 
@@ -364,7 +368,7 @@ body {
                     color: #FFF;
 
                     h1 {
-                        width: 50%;
+                        max-width: 50%;
                         font-family: eras-demi;
                         font-weight: lighter;
                         font-size: 1.625rem;
@@ -478,6 +482,223 @@ body {
     
                     &:hover {
                         transform: scale(1.15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        
+        div.nav-menu {
+            
+            img.logo {
+                width: 150px;
+            }
+        }
+
+        div.example {
+
+            .wrapper {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    html {
+
+        body {
+
+            div.desktop {
+                display: none;
+            }
+
+            >div {
+
+                h1.title {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .wrapper {
+                width: 95vw;
+            }
+
+            .nav-menu {
+                
+                &.mobile {
+                    display: block;
+                    max-height: unset;
+
+                    background-color: $accent-color1;
+
+                    transition: .15s ease-out;
+
+                    .nav-button {
+                        width: 40px;
+                        height: 40px;
+                        // background-color: aqua;
+
+                        position: fixed;
+                        right: 5px;
+                        top: 5px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            height: 6px;
+                            width: 95%;
+                            background-color: $accent-color2;
+                            border-radius: 2.5px;
+
+                            position: relative;
+
+                            transition: .2s;
+                            &::before, &::after {
+                                content: '';
+                                height: 6px;
+                                width: 100%;
+                                background-color: $accent-color2;
+                                border-radius: 3px;
+
+                                position: absolute;
+                                transition: .2s;
+                            }
+
+                            &::before {
+                                top: -10px;
+                            }
+                            &::after {
+                                top: 10px;
+                            }
+                        }
+
+                    }
+
+                    .btn-wrapper {
+                        flex-direction: column;
+                        width: 100%;
+
+                        background: none;
+
+                        h1 {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &.closed {
+                        left: 100vw;
+                    }
+                    &.open {
+                        left: 0;
+
+                        span {
+                            background-color: transparent;
+                            transform: rotate(360deg);
+
+                            &::before {
+                                transform: rotate(45deg) translate(7px, 7px);
+                            }
+                            &::after {
+                                transform: rotate(-45deg) translate(7px, -7px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .splash-screen {
+
+                img.arrow {
+                    display: none;
+                }
+            }
+
+            .process {
+
+                .wrapper {
+
+                    div {
+                        width: auto;
+                    }
+                }
+            }
+
+            .fees {
+
+                .wrapper {
+                    
+                    .container {
+                        max-width: 100%;
+                        justify-content: center;
+
+                        div {
+                        }
+                    }
+                }
+            }
+
+            .example {
+
+                .wrapper {
+                    
+                    div {
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .tips {
+                
+                .wrapper {
+
+                    p:first-child {
+                        width: 100%;
+                    }
+
+                    .container {
+                        max-width: 100%;
+
+                        div {
+                            width: 100%;
+
+                            h1 {
+                                max-width: 100%;
+                            }
+                            ul {
+                                max-width: 90%;
+                                margin-left: 20px;
+                            }
+                            &.orange {
+                                p {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .gallery {
+
+                .wrapper {
+                    width: 100%;
+
+                    .gallery-item {
+                        max-width: 45%;
+                        margin: .5rem;
                     }
                 }
             }

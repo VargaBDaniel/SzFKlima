@@ -15,7 +15,7 @@
 </head>
 
 <body onload="initializeNavButtons()">
-    <div class="nav-menu">
+    <div class="nav-menu desktop">
         <img src="img/logo_cropped.png" alt="" class="logo">
         <div class="btn-wrapper">
             <h1 data-scrollto-button="about">Rólunk</h1>
@@ -26,7 +26,20 @@
             <h1 data-scrollto-button="gallery">Galéria</h1>
         </div>
     </div>
-    <div class="pop-up">
+    <div class="nav-menu mobile closed">
+        <div class="nav-button" onclick="openAndCloseNavMenu()">
+            <span></span>
+        </div>
+        <div class="btn-wrapper">
+            <h1 data-scrollto-button="about">Rólunk</h1>
+            <h1 data-scrollto-button="process">Hogyan dolgozunk</h1>
+            <h1 data-scrollto-button="fees">Áraink</h1>
+            <h1 data-scrollto-button="example">Munkamenet</h1>
+            <h1 data-scrollto-button="tips">Tippek</h1>
+            <h1 data-scrollto-button="gallery">Galéria</h1>
+        </div>
+    </div>
+    <div class="pop-up desktop">
         <h2><span>Ingyenes</span> helyszíni felmérésre időpont egyeztetés</h2>
         <h1>+36 20 292 5281</h1>
     </div>
