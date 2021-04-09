@@ -672,6 +672,10 @@ html .gallery .wrapper .gallery-item .gallery-image:hover {
     -webkit-transform: rotate(-45deg) translate(7px, -7px);
             transform: rotate(-45deg) translate(7px, -7px);
   }
+  html body .splash-screen {
+    height: auto;
+    margin-top: 20px;
+  }
   html body .splash-screen img.arrow {
     display: none;
   }
