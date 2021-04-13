@@ -88,7 +88,9 @@ html .nav-menu {
 }
 
 html .nav-menu img.logo {
-  width: 200px;
+  width: 250px;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 html .nav-menu .btn-wrapper {
@@ -98,16 +100,16 @@ html .nav-menu .btn-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(15%, rgba(255, 255, 255, 0.8)), color-stop(99%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8)));
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.8) 99%, rgba(255, 255, 255, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(5%, rgba(255, 255, 255, 0.8)), color-stop(99%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0.8) 99%, rgba(255, 255, 255, 0.8) 100%);
 }
 
 html .nav-menu .btn-wrapper h1 {
   font-size: 1.625rem;
   font-weight: lighter;
   white-space: nowrap;
-  padding: 24px 0;
-  margin: 0 15px;
+  padding: 24px 10px;
+  margin: 0 5px;
   cursor: pointer;
   position: relative;
 }
@@ -127,7 +129,7 @@ html .nav-menu .btn-wrapper h1::after {
 }
 
 html .nav-menu .btn-wrapper h1:hover::after {
-  width: 100%;
+  width: calc(100% - 20px);
 }
 
 html .nav-menu.mobile {
@@ -221,7 +223,8 @@ html .splash-screen h1#name {
   color: #1899AF;
 }
 
-html .splash-screen .tel {
+html .splash-screen .tel,
+html .splash-screen .email {
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,7 +237,8 @@ html .splash-screen .tel {
   margin-bottom: 10px;
 }
 
-html .splash-screen .tel img {
+html .splash-screen .tel img,
+html .splash-screen .email img {
   height: 100%;
   margin-right: 10px;
 }
@@ -251,6 +255,7 @@ html .splash-screen img.arrow {
   left: calc(50% - 30px);
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
+  cursor: pointer;
 }
 
 @-webkit-keyframes blink {
@@ -315,6 +320,7 @@ html .process .wrapper div {
 html .process .wrapper div h1 {
   font-family: eras-demi;
   font-size: 1.625rem;
+  letter-spacing: 1px;
 }
 
 html .process .wrapper div h1 span {
@@ -347,6 +353,7 @@ html .fees .wrapper div.container div {
 html .fees .wrapper div.container div h2 {
   font-size: 1.625rem;
   font-family: eras-demi;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
@@ -568,7 +575,13 @@ html .gallery .wrapper .gallery-item .gallery-image:hover {
           transform: scale(1.15);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+  body div.nav-menu img.logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1400px) {
   body div.nav-menu img.logo {
     width: 150px;
   }

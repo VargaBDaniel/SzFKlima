@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Varga B. Dániel">
+    
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <meta name="keywords" content="Klíma, Klímaszerelés , Klímaszerelő, Épületgépészet, Légkondi, Légkondícionáló, Légkondiszerelő, Légkondiszerelés">
 
-    <title>Székely Ferenc Klímaszerelő</title>
+    <title>Székely Ferenc - Klímaszerelő</title>
 
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/gallery.css">
@@ -46,17 +50,19 @@
     <div class="splash-screen" data-scrollto-target="about">
         <h1 class="title">Rólunk</h1>
         <div class="wrapper">
-            <img class="portrait" src="" alt="">
+            <!-- <img class="portrait" src="" alt=""> -->
             <h1 id="name">Székely Ferenc</h1>
             <div class="tel">
                 <img src="img/phone.png" alt="telefonszám">
                 <h2>+36 20 292 5281</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet eu neque nec posuere.
-                Cras varius hendrerit porttitor. In hac habitasse platea dictumst. Mauris tristique dui sit amet ipsum
-                sagittis rutrum.</p>
+            <div class="email">
+                <img src="img/email.png" alt="email">
+                <h2>szfklima@gmail.com</h2>
+            </div>
+            <p>-- Oldal szerkesztés alatt. --</p>
         </div>
-        <img src="img/arrow.png" alt="Görgess lejjebb!" class="arrow">
+        <img src="img/arrow.png" alt="Görgess lejjebb!" class="arrow" data-scrollto-button="process">
     </div>
     <div class="process" data-scrollto-target="process">
         <h1 class="title">Hogyan dolgozunk?</h1>
@@ -206,29 +212,18 @@
         </div>
     </div>
     <div class="gallery" data-scrollto-target="gallery">
-        <h1 class="title">Munkáink</h1>
+    <h1 class="title">Munkáink</h1>
         <div class="wrapper">
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img1.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img2.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img3.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img4.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img5.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img6.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/demo_img7.jpg" alt="">
-            </div>
+            <?php
+            // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
+            $dir = __DIR__ . DIRECTORY_SEPARATOR . "gallery" . DIRECTORY_SEPARATOR; // dir/gallery/
+            $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+
+            // (C) OUTPUT IMAGES    
+            foreach ($images as $i) {
+            printf(' <div class="gallery-item"><img class="gallery-image" src="gallery/%s"/></div>', basename($i));
+            }
+            ?>
         </div>
     </div>
 </body>
