@@ -212,107 +212,18 @@
         </div>
     </div>
     <div class="gallery" data-scrollto-target="gallery">
-        <h1 class="title">Munkáink</h1>
+    <h1 class="title">Munkáink</h1>
         <div class="wrapper">
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/01.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/02.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/03.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/04.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/05.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/06.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/07.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/08.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/09.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/10.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/11.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/12.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/14.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/15.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/16.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/17.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/18.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/19.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/20.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/21.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/22.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/23.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/24.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/25.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/26.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/27.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/28.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/29.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/30.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/31.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/32.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/33.jpg" alt="">
-            </div>
-            <div class="gallery-item">
-                <img class="gallery-image" src="gallery/34.jpg" alt="">
-            </div>
+            <?php
+            // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
+            $dir = __DIR__ . DIRECTORY_SEPARATOR . "gallery" . DIRECTORY_SEPARATOR; // dir/gallery/
+            $images = glob($dir . "*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+
+            // (C) OUTPUT IMAGES    
+            foreach ($images as $i) {
+            printf(' <div class="gallery-item"><img class="gallery-image" src="gallery/%s"/></div>', basename($i));
+            }
+            ?>
         </div>
     </div>
 </body>
