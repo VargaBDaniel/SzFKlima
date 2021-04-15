@@ -212,10 +212,13 @@ html .splash-screen {
           justify-content: center;
 }
 
+html .splash-screen.mobile {
+  display: none;
+}
+
 html .splash-screen img.portrait {
   width: 280px;
   height: 365px;
-  border: 1px solid #949494;
 }
 
 html .splash-screen h1#name {
@@ -367,6 +370,11 @@ html .fees .wrapper div.container div li {
 
 html .fees .wrapper div.container div span {
   color: #EC6724;
+}
+
+html .fees .wrapper div.container div:first-child {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 html .example .wrapper {
@@ -691,6 +699,10 @@ html .gallery .wrapper .gallery-item .gallery-image:hover {
   }
   html body .splash-screen img.arrow {
     display: none;
+  }
+  html body .splash-screen div.wrapper img.portrait {
+    height: auto;
+    content: url("/img/logo_cropped.png");
   }
   html body .process .wrapper div {
     width: auto;

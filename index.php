@@ -50,7 +50,7 @@
     <div class="splash-screen" data-scrollto-target="about">
         <h1 class="title">Rólunk</h1>
         <div class="wrapper">
-            <!-- <img class="portrait" src="" alt=""> -->
+            <img class="portrait" src="" alt="">
             <h1 id="name">Székely Ferenc</h1>
             <div class="tel">
                 <img src="img/phone.png" alt="telefonszám">
@@ -96,6 +96,15 @@
         <div class="wrapper">
             <div class="container">
                 <div>
+                    <h2>Felmérés és árajánlat készítés:</h2>
+                    <ul>
+                        <li>Alap szerelés 3 méter csőhosszig: <span>60.000</span>.- Ft</li>
+                        <li>Alapszerelésen felüli csövezés méterenként + <span>7.000</span>.- Ft</li>
+                        <li>Előcsövezés: vésés/csövezés méterenként: <span>9.000</span>.- Ft</li>
+                        <li>Előcsövezésre telepítés (beltéri egységenként): <span>40.000</span>.- Ft</li>
+                    </ul>
+                </div>
+                <div>
                     <h2>A TELEPÍTÉS ALAPSZERELÉSI ÁRA TARTALMAZZA:</h2>
                     <ul>
                         <li>- bel-, és kültéri egység felszerelését, bekötését</li>
@@ -119,17 +128,12 @@
                     </ul>
                 </div>
                 <div>
-                    <h2>Felmérés és árajánlat készítés:
-                    </h2>
-                    <ul>
-                        <li>Alap szerelés 3 méter csőhosszig: <span>60.000</span>.- Ft</li>
-                        <li>Alapszerelésen felüli csövezés méterenként + <span>7.000</span>.- Ft</li>
-                        <li>Előcsövezés: vésés/csövezés méterenként: <span>9.000</span>.- Ft</li>
-                        <li>Előcsövezésre telepítés (beltéri egységenként): <span>40.000</span>.- Ft</li>
-                    </ul>
+                    <h2>Munkavállalás helyszíne:</h2>
+                    <p>Monor, Monorierdő, Pilis, Albertirsa, Dánszentmiklós, Nyáregyháza, Vasad, Csévharaszt, Újlengyel, Inárcs, Kakucs, Újhartyán, Hernád, Gyón, Dabas, Sári, Ócsa, Felsőpakony, Gyál, Vecsés, Üllő, Ecser, Maglód, Gyömrő, Péteri, Mende, Tápiósáp, Sülysáp, Tápiószecső, Szentmártonkáta, Nagykáta, Tápiószentmárton, Tápióbicske, Tápióság, Úri, Gomba, Bénye, Káva, Pánd, Cegléd, Pécel, Nagytarcsa, Kistarcsa, Csömör, Kerepes, Dunakeszi, Fót, Mogyoród</p>
+                    <h3>Budapesten belül:</h3>
+                    <p>3, 4, 10, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23</p>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="example" data-scrollto-target="example">
@@ -212,7 +216,7 @@
         </div>
     </div>
     <div class="gallery" data-scrollto-target="gallery">
-    <h1 class="title">Munkáink</h1>
+        <h1 class="title">Munkáink</h1>
         <div class="wrapper">
             <?php
             // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
@@ -227,5 +231,4 @@
         </div>
     </div>
 </body>
-
 </html>

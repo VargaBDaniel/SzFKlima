@@ -171,11 +171,13 @@ html {
         align-items: center;
         justify-content: center;
 
+        &.mobile {
+            display: none;
+        }
+
         img.portrait {
             width: 280px;
             height: 365px;
-
-            border: 1px solid rgb(148, 148, 148);
         }
         h1#name {
             font-size: 2.188rem;
@@ -305,6 +307,10 @@ html {
     
                     span {
                         color: $accent-color2;
+                    }
+
+                    &:first-child {
+                        flex-basis: 100%;
                     }
                 }
             }
@@ -637,6 +643,14 @@ html {
 
                 img.arrow {
                     display: none;
+                }
+
+                div.wrapper {
+
+                    img.portrait {
+                        height: auto;
+                        content: url('/img/logo_cropped.png');
+                    }
                 }
             }
 
