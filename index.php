@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style/gallery.css">
 
     <script src="scripts/ScrollToModule.js"></script>
+    
 </head>
 
 <body onload="initializeNavButtons()">
@@ -46,6 +47,9 @@
     <div class="pop-up desktop">
         <h2><span>Ingyenes</span> helyszíni felmérésre időpont egyeztetés</h2>
         <h1>+36 20 292 5281</h1>
+    </div>
+    <div id="particles-js">
+        <div class="wrapper"></div>
     </div>
     <div class="splash-screen" data-scrollto-target="about">
         <h1 class="title">Rólunk</h1>
@@ -230,5 +234,9 @@
             ?>
         </div>
     </div>
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
