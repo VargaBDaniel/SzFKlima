@@ -100,6 +100,7 @@
         <h1 class="title">Áraink</h1>
         <div class="wrapper">
             <div class="container">
+                
                 <div>
                     <h2>Felmérés és árajánlat készítés:</h2>
                     <ul>
@@ -137,6 +138,13 @@
                     <p>Monor, Monorierdő, Pilis, Albertirsa, Dánszentmiklós, Nyáregyháza, Vasad, Csévharaszt, Újlengyel, Inárcs, Kakucs, Újhartyán, Hernád, Gyón, Dabas, Sári, Ócsa, Felsőpakony, Gyál, Vecsés, Üllő, Ecser, Maglód, Gyömrő, Péteri, Mende, Tápiósáp, Sülysáp, Tápiószecső, Szentmártonkáta, Nagykáta, Tápiószentmárton, Tápióbicske, Tápióság, Úri, Gomba, Bénye, Káva, Pánd, Cegléd, Pécel, Nagytarcsa, Kistarcsa, Csömör, Kerepes, Dunakeszi, Fót, Mogyoród</p>
                     <h3>Budapesten belül:</h3>
                     <p>3, 4, 10, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23</p>
+                </div>
+                <div>
+                    <h2>Karbantartás</h2>
+                    <ul>
+                        <li>Klíma karbantartás egy beltéri egység esetén: <span>9500</span>.- Ft</li>
+                        <li>Több egység esetén: <span>8500</span>.- Ft/db</li>
+                    </ul>
                 </div>
             </div>
         </div>
