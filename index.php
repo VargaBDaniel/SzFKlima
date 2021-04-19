@@ -8,7 +8,8 @@
     <meta name="author" content="Varga B. Dániel">
     
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-    <meta name="keywords" content="Klíma, Klímaszerelés , Klímaszerelő, Épületgépészet, Légkondi, Légkondícionáló, Légkondiszerelő, Légkondiszerelés">
+    <meta name="keywords" content="klíma, klímaszerelés , klímaszerelő, épületgépészet, légkondi, légkondícionáló, légkondiszerelő, légkondiszerelés, hűtés, fűtés, klíma beszerelés, légkondi beszerelés, klíma javítás, klíma karbantartás, légkondi karbantartás, klíma berendezés, székely ferenc, székely ferenc klíma, szfklíma, szf klíma, székely ferenc klímaszerelő">
+    <meta name="description" content="Klímaszerelés Budapesten és Budapest vonzáskörzetében, ingyenes helyszíni felmérésért keressen minket!">
 
     <title>Székely Ferenc - Klímaszerelő</title>
 
