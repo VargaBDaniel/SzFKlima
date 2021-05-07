@@ -1,16 +1,3 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
-
 particlesJS('particles-js',
 
     {
@@ -35,7 +22,7 @@ particlesJS('particles-js',
                     "nb_sides": 5
                 },
                 "image": {
-                    "src": "../img/snowflakes.png",
+                    "src": "./img/snowflakes.png",
                     "width": 100,
                     "height": 100
                 }
@@ -125,3 +112,94 @@ particlesJS('particles-js',
     }
 
 );
+
+function initializeNavButtons() {
+    let navButtons = document.querySelectorAll("[data-scrollto-button]");
+
+    navButtons.forEach(button => button.addEventListener("click", getScrollToTarget));
+};
+
+function getScrollToTarget() {
+    let scrollToTargetName = this.getAttribute("data-scrollto-button");
+    let scrollToTargetElement = document.querySelector("[data-scrollto-target=" + scrollToTargetName + "]")
+
+    if (this.parentElement.parentElement.classList.contains('mobile')) {
+        openAndCloseNavMenu();
+    }
+
+    scrollViewportToTarget(scrollToTargetElement);
+};
+
+function scrollViewportToTarget(target) {
+    window.scrollTo({
+        top: target.offsetTop - 80,
+        behaviors: 'smooth'
+    })
+};
+
+function openAndCloseNavMenu() {
+    let navMenu = document.getElementsByClassName('nav-menu mobile')[0];
+
+    if (navMenu.classList.contains('closed')) {
+        navMenu.classList.replace('closed', 'open')
+    } else {
+        navMenu.classList.replace('open', 'closed')
+    };
+};
+
+imagesLoaded( document.querySelector('.grid'), function( instance ) {
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+    // options
+    itemSelector: '.gallery-item',
+    columnWidth: 300,
+    gutter: 5,
+    fitWidth: true,
+    });
+});
+
+$(function() {
+   
+    $(".form-control").on('focus', function(){
+
+        $(this).parents(".form-group").addClass('focused');
+
+    });
+
+    $(".form-control").on('blur', function(){
+
+        $(this).parents(".form-group").removeClass('focused');
+
+    });
+
+});
+
+function toggleContactForm() {
+    let formContainer = $("#form-container")[0];
+
+    if(formContainer.classList.contains('visible')) {
+        formContainer.classList.replace('visible', 'hidden');
+
+        $('.arrow').show();
+    } else {
+        formContainer.classList.replace('hidden', 'visible');
+        
+        let formPosition = formContainer.offsetTop;
+        console.log(formPosition);
+        window.scroll({
+            top: formPosition - 90,
+            behavior: 'smooth',
+        });
+
+        $('.arrow').hide();
+    }
+};
+
+function displaySentMessage() {
+    let messageSent = localStorage.getItem('messageSent');
+    if (messageSent == 'true') {
+        $('.message-sent-alert').text('Üzenetét sikeresen elküldte, hamarosan felvesszük Önnel a kapcsolatot!');
+    };
+
+    localStorage.setItem('messageSent', 'false');
+}
