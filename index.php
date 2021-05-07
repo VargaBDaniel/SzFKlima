@@ -11,7 +11,7 @@
             $messageSubject = $_POST['subject'];
             $message = $_POST['message'];
         
-            $to = "youremail@placeholder.com";
+            $to = "szfklima@gmail.com";
             $body = "";
         
             $body .= "Név: ".$userName. "\r\n";
@@ -19,7 +19,7 @@
             $body .= "Telefonszám: ".$userTel. "\r\n";
             $body .= "Üzenet: ".$message. "\r\n";
 
-            $secretKey = "6LfYWsAaAAAAAKQ0LJg8fRUzLM8t8-Y0jSQpXN4B";
+            $secretKey = "";
             $responseKey = $_POST['g-recaptcha-response'];
             $UserIP = $_SERVER['REMOTE_ADDR'];
             $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
@@ -148,7 +148,7 @@
                         <label for="message" class="form-label">Üzenet</label>
                         <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Írja ide üzenetét..." tabindex="4" required></textarea>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LfYWsAaAAAAANA3UdMPhmVf7sPNSqq8CH5-PoQ_"></div>
+                    <div class="g-recaptcha" data-sitekey=""></div>
                     <div>
                         <input type="submit" class="btn" value="Küldés">
                     </div>
