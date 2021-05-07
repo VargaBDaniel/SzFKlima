@@ -46,6 +46,21 @@ html {
         }
     }
     
+    #particles-js {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+
+        z-index: -1000;
+
+        // background-color: black;
+
+        .wrapper {
+            position: absolute;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+    }
     .wrapper {
         width: 1080px;
 
@@ -68,6 +83,8 @@ html {
         
         overflow-y: visible;
         z-index: 100;
+        background: linear-gradient(to right, rgba(255,255,255,0) 20%,rgba(255,255,255,0.8) 25%,rgba(255,255,255,0.8) 99%,rgba(255,255,255,0.8) 100%);
+
 
         img.logo {
             width: 250px;
@@ -79,7 +96,6 @@ html {
             display: flex;
             align-items: center;
 
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 5%,rgba(255,255,255,0.8) 99%,rgba(255,255,255,0.8) 100%);
             h1 {
                 font-size: 1.625rem;
                 font-weight: lighter;
@@ -165,17 +181,19 @@ html {
 
     .splash-screen {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .title {
+            margin-top: 100px;
+        }
+
+        &.mobile {
+            display: none;
+        }
 
         img.portrait {
             width: 280px;
             height: 365px;
-
-            border: 1px solid rgb(148, 148, 148);
         }
         h1#name {
             font-size: 2.188rem;
@@ -197,6 +215,22 @@ html {
             img {
                 height: 100%;
                 margin-right: 10px;
+            }
+        }
+
+        .email {
+            padding: 10px;
+            margin-bottom: 0;
+            background-color: $accent-color1;
+            color: #FFF;
+            box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+            cursor: pointer;
+            user-select: none;
+            transition: .2s;
+
+            &:hover {
+                box-shadow: none;
+                background-color: darken($color: $accent-color1, $amount: 10);
             }
         }
 
@@ -287,6 +321,14 @@ html {
                     text-align: center;
 
                     margin-bottom: 50px;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    * {
+                        max-width: 500px;
+                    }
     
                     h2 {
                         font-size: 1.625rem;
@@ -305,6 +347,12 @@ html {
     
                     span {
                         color: $accent-color2;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(5) {
+                        flex-basis: 100%;
                     }
                 }
             }
@@ -328,7 +376,7 @@ html {
                 margin-bottom: 40px;
 
                 text-align: center;
-                font-family: eras;
+                font-family: roboto-l;
 
                 img {
                     height: 295px;
@@ -375,8 +423,7 @@ html {
 
                     h1 {
                         max-width: 50%;
-                        font-family: eras-demi;
-                        font-weight: lighter;
+                        font-family: roboto;
                         font-size: 1.625rem;
 
                         margin: 25px 0;
@@ -466,31 +513,21 @@ html {
     .gallery {
 
         .wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            margin: -1rem -1rem;
-    
-            .gallery-item {
-                flex: 1 0 18rem;
-                max-width: 40%;
-                margin: 1rem;
-                box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-                overflow: hidden;
-    
-                .gallery-image {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 400ms ease-out;
-    
-                    &:hover {
-                        transform: scale(1.15);
+            all: unset;
+            width: 1080px;
+
+            .grid {
+                margin: 0 auto;
+
+                .gallery-item {
+                    width: 300px;
+                    img {
+                        width: 100%;
                     }
                 }
             }
+    
+            
         }
     }
 }
@@ -638,6 +675,14 @@ html {
                 img.arrow {
                     display: none;
                 }
+
+                div.wrapper {
+
+                    img.portrait {
+                        height: auto;
+                        content: url('/img/logo_cropped.png');
+                    }
+                }
             }
 
             .process {
@@ -710,11 +755,6 @@ html {
 
                 .wrapper {
                     width: 100%;
-
-                    .gallery-item {
-                        max-width: 45%;
-                        margin: .5rem;
-                    }
                 }
             }
         }
